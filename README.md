@@ -30,7 +30,7 @@ Developed from scratch, intuitive, minimalist and responsive for many devices (D
   
 - Improvements
   * Find a way to render contend dynamicaly based on a calculation, not on manually adjust: 
-   * `.styleclass{ attribute: calc(%/px/vw/rem/... + px)}`
+    * `.styleclass{ attribute: calc(%/px/vw/rem/... + px)}`
   * Use database instead of JSON for site information, but right now, for the existing amount of information, I consider is not needed
   * Find a good alternative for blur filter in browsers that don't support `backdrop-filter`
   * Implement skill level bar animation for mobile devices, because hover action dosen't actually exist on mobile
