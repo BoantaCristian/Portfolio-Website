@@ -1,0 +1,1217 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+mat-card{
+    background: none;
+    box-shadow: none !important;
+    border: none;
+    text-align: center;
+    position: relative;
+}
+swiper{
+    top: -10px;
+}
+.swiperContainer{
+    width: 82.5%;
+    margin: auto;
+}
+::ng-deep.ngx-gallery-image-wrapper{
+    border-radius: 20px !important;
+    transition: 500ms ease;
+}
+::ng-deep.ngx-gallery-image-size-cover .ngx-gallery-image {
+    margin: 0 auto !important;
+    width: 100.1% !important;
+  }
+::ng-deep.ngx-gallery-preview-img {
+    transition: opacity 0.3s linear, transform .3s !important;
+}
+ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-right {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    height: 50%;
+    width: 42px;
+}
+ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -43px;
+    height: 50%;
+    width: 42px;
+}
+ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-right {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    height: 50%;
+    width: 42px;
+}
+ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -43px;
+    height: 50%;
+    width: 42px;
+}
+ngx-gallery /deep/ ngx-gallery-thumbnails {
+    margin-top: 10px !important;
+}
+::ng-deep .ngx-gallery-thumbnail-video::after {    
+    top: calc(50% - 30px) !important;
+    font-size: 40px !important;
+    z-index: 1;
+}
+::ng-deep.ngx-gallery-thumbnails.ngx-gallery-video {  
+    /* your styles */
+    position: absolute;
+    top: 2000px !important;
+    color: black;
+}
+
+::ng-deep.fa-chevron-left{
+    text-shadow: 0 0 4px black;
+}
+::ng-deep.fa-chevron-right{
+    text-shadow: 0 0 4px black;
+    position: relative;
+}
+::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail {
+    border: none !important;
+    border-radius: 12px;
+    transition: 500ms ease !important;
+}
+::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active {
+    border: 1px solid rgba(7, 7, 7, 0.705) !important;
+    border-radius: 10px;
+}
+::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::before {
+    font-family: FontAwesome;
+    content: "\f26c";
+    color: white;
+    font-size: 26.5px;
+    text-align: center;
+    text-shadow: 0 0 3px black;
+    line-height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    padding-top: 3%;
+    padding-left: 1px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active:first-of-type::before { 
+    opacity: 0 !important; 
+}
+::ng-deep.ngx-gallery-thumbnail.ngx-gallery-active { 
+    color:rgb(109, 109, 109) !important; 
+}
+::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+}
+.title{
+    color: white;
+    font-weight: 600;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    margin-bottom: 25px;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+.backButton{
+    color: white;
+    font-size: 28px;
+    font-weight: 300 !important;
+    background: none;
+    font-weight: bold;
+    box-shadow: none;
+    border: none;
+    position: absolute;
+    top: -35px;
+    z-index: 1;
+    transition: 400ms ease-in-out;
+}
+.backButton:hover{
+    font-size: 30px;
+}
+.backButton:hover .roundParantesis{
+    font-size: 37px;
+    left: -13px;
+}
+.roundParantesis{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 35px;
+    position: relative;
+    left: -12px;
+    top: 0px;
+    transition: 400ms ease;
+}
+.projectsContainer{
+    box-sizing: border-box;
+    align-items: center;
+    width: 90%;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-bottom: 50px;
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.65);
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+}
+.projectCover{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: 400ms ease-in-out;
+}
+.projectCover img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.projectCover ::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transition: 500ms ease;
+}
+.projectCover:hover ::after{
+    background: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(3px) opacity(1);
+}
+.projectCover:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.currentSlide{
+    transform: scale(1.1);
+}
+.currentSlide::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transition: 500ms ease;
+    background: rgba(0, 0, 0, 0.247);
+    backdrop-filter: blur(3px) opacity(1);
+}
+.currentSlideTitle{
+    color: white;
+    font-size: calc(10px + 0.5vw);
+    font-weight: 600;
+    text-shadow: 0px 0px 10px black;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease;
+}
+.projectTitle{
+    color: white;
+    font-size: calc(10px + 0.5vw);
+    font-weight: 600;
+    text-shadow: 0px 0px 10px black;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+.projectDetails:hover .projectTitle{
+    top: 30%;
+    opacity: 1;
+}
+h1{
+    color: white;
+    font-weight: 600;
+    transition: 400ms ease-in-out;
+}
+h3{
+    font-weight: 400;
+    margin-bottom: 20px;
+    transition: 400ms ease-in-out;
+}
+li{
+    font-weight: 200;
+    transition: 400ms ease-in-out;
+}
+.content{
+    color: white;
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 300;
+    text-shadow: 0px 0px 5px #000 !important;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+.flexContainer{
+    display: flex;
+}
+.categories{
+    flex: 25%;
+    padding: 10px;
+}
+.categoryContainer{
+    margin: 0 auto;
+    width: 99%;
+    min-width: 600px;
+}
+@media(min-width: 1380px){
+    .projectWrapper{
+        display: flex;
+        margin-top: -15px !important;
+        margin-bottom: -10px !important;
+    }
+    .mediaContainer{
+        width: 50%;
+        height: 500px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .detailsContainer{
+        width: 50%;
+        min-height: 450px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-left: 25px !important;
+    }
+    .gridContainer{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+        margin-bottom: -15px;
+    }
+    .buttonWrapper{
+        position: relative; width: 100%;
+    }
+    .backButton{
+        left: 10px;
+    }
+}
+@media(max-width: 1379px){
+    .projectWrapper{
+        display: inline-block;
+        width: 100%;
+    }
+    .mediaContainer{
+        width: 80%;
+        min-width: 600px;
+        height: 450px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .detailsContainer{
+        width: 80%;
+        min-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .gridContainer{
+        width: 80%;
+        min-width: 600px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+    swiper{
+        width: 80%;
+        min-width: 600px;
+        margin: auto;
+    }
+    .buttonWrapper{
+        position: relative;
+        width: 80%;
+        height: 40px;
+        margin: auto;
+        min-width: 600px;
+    }
+    .backButton{
+        left: 0%;
+    }
+}
+@media(max-width: 1080px){
+    .mediaContainer{
+        width: 80%;
+        min-width: 600px;
+        height: 400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+@media(min-width: 1439px){
+    .mediaContainer{
+        width: 100%;
+        max-width: 1300px;
+        max-height: 650px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .detailsContainer{
+        width: 100%;
+        min-width: 600px;
+        min-height: 350px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+
+/* Phone resolution Usually between 320px - 480px */
+@media(min-width: 280px) and (max-width: 650px){
+    mat-card{
+        padding: 0px !important;
+        margin: 0px auto !important;
+    }
+    swiper{
+        top: -10px;
+    }
+    ::ng-deep.ngx-gallery-image-wrapper{
+        border-radius: 8px !important;
+    }
+    ::ng-deep.ngx-gallery-image-size-cover .ngx-gallery-image {
+        margin: 0 auto !important;
+        width: 100% !important;
+      }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-right {
+        left: 267px;
+    }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-left {
+        left: -29px;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-right {
+        left: 267px;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-left {
+        left: -29px;
+    }
+    ::ng-deep.fa-chevron-left, ::ng-deep.fa-chevron-right{
+        font-size: 14px !important;
+    }
+    ::ng-deep .ngx-gallery-thumbnail-video::after {    
+        top: calc(50% - 15.5px) !important;
+        font-size: 20px !important;
+    }    
+    ::ng-deep.fa-chevron-left, ::ng-deep.fa-chevron-right{
+        font-size: 22px;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail {
+        border-radius: 5px;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active {
+        border: 1px solid rgba(7, 7, 7, 0.705) !important;
+        border-radius: 5px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::before {
+        font-size: 16px;
+        top: 42.5% !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::after {
+        border-radius: 5px;
+    }
+    .title{
+        min-width: 320px;
+        width: 320px;
+        margin: 0 auto !important;
+        margin-left: 0px !important;
+        margin-top: 20px !important;
+        font-size: 20px !important;
+    }
+    .projectWrapper{
+        display: inline-block;
+        width: 320px !important;
+        margin: 0 auto !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .mediaContainer{
+        min-width: 320px;
+        width: 320px;
+        height: 241px;
+        margin: 0 auto !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .detailsContainer{
+        width: 100%;
+        min-width: 300px;
+        min-height: 170px;
+        margin: 0 auto !important;
+        margin-top: -20px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .content{
+        font-size: 10px !important;
+        line-height: 12px !important;
+        padding: 10px;
+        color: white;
+        text-align: justify;
+        font-weight: 200;
+        text-shadow: 2px 2px 4px #000 !important;
+        pointer-events: none;
+    }
+    .content h3{
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        margin-bottom: 10px;
+    }
+    .content p{
+        margin-bottom: 8px;
+    }
+    .gridContainer{
+        width: 310px;
+        min-width: 310px;
+        margin: auto !important;
+        margin-left: 10px !important;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+    .categoryContainer{
+        margin: 0 auto !important;
+        width: 320px;
+        min-width: 320px !important;
+        margin-top: -30px !important;
+        padding-bottom: -10px !important;
+    }
+    .categories{
+        flex: 1;
+        padding: 10px;
+        padding-left: 0px !important;
+        max-width: 300px;
+    }
+    .categories h3{
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 5px !important;
+    }
+    .categories ul{
+        margin-bottom: -13px !important;
+    }
+    .categories ul li{
+        font-size: 9px;
+        line-height: 13px !important;
+        margin-left: -20px !important;
+    }
+    .swiperContainer{
+        width: 320px !important;
+        min-width: 320px !important;
+        margin: 0 auto !important;
+    }
+    swiper{
+        width: 300px !important;
+        min-width: 300px !important;
+        margin: 0 auto !important;
+    }
+    .projectsContainer{
+        width: 90px;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.65);
+    }
+    .projectTitle{
+        top: 50% !important;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 50% !important;
+    }
+    .currentSlideTitle{
+        top: 50% !important;
+    }
+    .buttonWrapper{
+        min-width: 320px !important;
+        width: 320px !important;
+    }
+    .backButton{
+        font-size: 20px;
+        font-weight: 300 !important;
+        top: -20px;
+        left: 50% !important;
+        transform: translateX(-50%);
+        margin-left: 7px;
+    }
+    .backButton:hover{
+        font-size: 22px !important;
+    }
+    .roundParantesis{
+        font-size: 30px;
+        left: -10px;
+        top: 3px;
+    }
+    .backButton:hover .roundParantesis{
+        font-size: 32px;
+        left: -11px;
+    }
+}
+/* Phone Landscape and rare tablet resolution Usually between 650px — 768px*/
+@media(min-width: 651px) and (max-width: 767px){
+    mat-card{
+        padding: 0px !important;
+        margin: 0px auto !important;
+    }
+    swiper{
+        top: -10px;
+    }
+    ::ng-deep.ngx-gallery-image-wrapper{
+        border-radius: 8px !important;
+    }
+    ::ng-deep.ngx-gallery-image-size-cover .ngx-gallery-image {
+        margin: 0 auto !important;
+        width: 100% !important;
+      }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-right {
+        left: 244.2px;
+    }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-left {
+        left: -26.2px;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-right {
+        left: 244.2px;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-left {
+        left: -26.2px;
+    }
+    ::ng-deep.fa-chevron-left, ::ng-deep.fa-chevron-right{
+        font-size: 14px;
+    }
+    ::ng-deep .ngx-gallery-thumbnail-video::after {    
+        top: calc(50% - 15.5px) !important;
+        font-size: 20px !important;
+    }    
+    ::ng-deep.fa-chevron-left, ::ng-deep.fa-chevron-right{
+        font-size: 16px;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail {
+        border-radius: 5px;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active {
+        border: 1px solid rgba(7, 7, 7, 0.705) !important;
+        border-radius: 6px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::before {
+        font-size: 16px;
+        top: 35%;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::after {
+        border-radius: 5px;
+    }
+    .title{
+        position: absolute !important;
+        top: 15px;
+        height: 30px !important;
+        font-size: 20px !important;
+    }
+    .projectWrapper{
+        display: flex;
+        width: 600px !important;
+        margin: 0 auto !important;
+        padding-top: 50px !important;
+    }
+    .mediaContainer{
+        min-width: 50%;
+        width: 50%;
+        height: 217px !important;
+        margin: 0 auto !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .detailsContainer{
+        width: 300px;
+        min-width: 300px;
+        min-height: 170px;
+        margin: 0 auto !important;
+        margin-top: 18px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .content{
+        font-size: 10px !important;
+        line-height: 11px !important;
+        color: white;
+        text-align: justify;
+        font-weight: 200;
+        text-shadow: 2px 2px 4px #000 !important;
+        pointer-events: none;
+    }
+    .content h3{
+        font-size: 14px !important;
+        font-weight: 600 !important;
+        margin-bottom: 10px;
+    }
+    .content p{
+        margin-bottom: 8px;
+    }
+    .gridContainer{
+        width: 590px;
+        min-width: 590px;
+        position: relative;
+        left: -140% !important;
+        margin: auto !important;
+        margin-left: 5px !important;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+    }
+    .categoryContainer{
+        margin: 0 auto !important;
+        width: 150px;
+        min-width: 150px !important;
+    }
+    .categories{
+        flex: 1;
+        padding: 10px;
+        padding-left: 0px !important;
+    }
+    .categories h3{
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        margin-bottom: 5px !important;
+    }
+    .categories ul{
+        margin-bottom: 0px !important;
+    }
+    .categories ul li{
+        font-size: 9px;
+        line-height: 12px !important;
+        margin-left: -20px !important;
+    }
+    .swiperContainer{
+        width: 600px !important;
+        min-width: 600px !important;
+        margin: 0 auto !important;
+        padding-left: 10px !important;
+        margin-bottom: -30px !important;
+        padding-bottom: -30px !important;
+    }
+    swiper{
+        width: 600px !important;
+        min-width: 600px !important;
+        margin: 0 auto !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    .projectsContainer{
+        width: 100px;
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.65);
+        ;
+    }
+    .projectTitle{
+        top: 50% !important;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 50% !important;
+    }
+    .currentSlideTitle{
+        top: 50% !important;
+    }
+    .buttonWrapper{
+        min-width: 320px !important;
+        width: 320px !important;
+        margin: 0px auto !important;
+    }
+    .backButton{
+        font-size: 16px;
+        font-weight: 300 !important;
+        top: -10px;
+        left: 50% !important;
+        transform: translateX(-50%);
+        margin-left: 10px;
+    }
+    .backButton:hover{
+        font-size: 17px !important;
+    }
+    .roundParantesis{
+        font-size: 26px;
+        left: -5px;
+        top: 1px;
+    }
+    .backButton:hover .roundParantesis{
+        font-size: 27px;
+        left: -5px;
+    }
+}
+/* Tablet resolution Usually between 1024px — 1366px*/
+@media(min-width: 963px) and (max-width: 1380px){
+    mat-card{
+        padding: 0px !important;
+        margin: 0px auto !important;
+    }
+    swiper{
+        top: -10px;
+    }
+    ::ng-deep.ngx-gallery-image-wrapper{
+        border-radius: 8px !important;
+    }
+    ::ng-deep.ngx-gallery-image-size-cover .ngx-gallery-image {
+        margin: 0 auto !important;
+        width: 100% !important;
+      }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-right {
+        left: 521px;
+    }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-left {
+        left: -34px;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-right {
+        left: 521px;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-left {
+        left: -34px;
+    }
+    ::ng-deep .ngx-gallery-thumbnail-video::after {    
+        top: calc(50% - 20px) !important;
+        font-size: 26px !important;
+    }    
+    ::ng-deep.fa-chevron-left, ::ng-deep.fa-chevron-right{
+        font-size: 22px;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail {
+        border-radius: 5px;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active {
+        border: 1px solid rgba(7, 7, 7, 0.705) !important;
+        border-radius: 6px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::before {
+        font-size: 22px;
+        top: 45%;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::after {
+        border-radius: 5px;
+    }
+    .title{
+        position: absolute !important;
+        top: 10px;
+        height: 30px !important;
+        font-size: 20px !important;
+    }
+    .projectWrapper{
+        display: flex;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding-top: 50px !important;
+    }
+    .mediaContainer{
+        min-width: 50%;
+        width: 50%;
+        height: 398px !important;
+        margin: 0 auto !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .detailsContainer{
+        min-width: 50%;
+        width: 50%;
+        min-height: 170px;
+        margin: 0 auto !important;
+        margin-top: 18px !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        padding-left: 10px !important;
+        padding-right: 0px !important;
+    }
+    .content{
+        font-size: 14px !important;
+        color: white;
+        text-align: justify;
+        font-weight: 200;
+        text-shadow: 2px 2px 4px #000 !important;
+        pointer-events: none;
+    }
+    .content h3{
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        margin-bottom: 10px;
+    }
+    .content p{
+        margin-bottom: 8px;
+    }
+    .gridContainer{
+        min-width: 100%;
+        width: 100%;
+        position: relative;
+        left: -0% !important;
+        margin: auto !important;
+        margin-left: 5px !important;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+    }
+    .categoryContainer{
+        margin: 0 auto !important;
+        margin-left: 20px !important;
+        min-width: 98.5%;
+        width: 98.5%;
+    }
+    .categories{
+        flex: 1;
+        padding: 10px;
+        padding-left: 0px !important;
+    }
+    .categories h3{
+        font-size: 18px !important;
+        font-weight: 600 !important;
+        margin-bottom: 5px !important;
+    }
+    .categories ul{
+        margin-bottom: 0px !important;
+    }
+    .categories ul li{
+        font-size: 14px;
+        margin-left: -12.5px !important;
+    }
+    .swiperContainer{
+        min-width: 84.5%;
+        width: 84.5%;
+        margin: 0 auto !important;
+        padding-left: 25px !important;
+        margin-bottom: -30px !important;
+        padding-bottom: -30px !important;
+    }
+    swiper{
+        min-width: 100%;
+        width: 100%;
+        margin: 0 auto !important;
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    .projectsContainer{
+        border-radius: 8px;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.65);
+        height: 80% !important;
+        min-height: 80% !important;
+        max-height: 80% !important;
+    }
+    .projectTitle{
+        top: 50% !important;
+        font-size: 14px;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 50% !important;
+        font-size: 14px;
+    }
+    .currentSlideTitle{
+        top: 50% !important;
+        font-size: 14px;
+    }
+    .buttonWrapper{
+        min-width: 100%;
+        width: 100%;
+    }
+    .backButton{
+        font-size: 20px;
+        font-weight: 300 !important;
+        top: -10px;
+        margin-left: 0px;
+    }
+    .backButton:hover{
+        font-size: 21px !important;
+    }
+    .roundParantesis{
+        font-size: 26px;
+        left: -8px;
+        transition: 400ms ease-in-out;
+    }
+    .backButton:hover .roundParantesis{
+        font-size: 27px;
+        left: -8.5px;
+    }
+}
+/* Desktop and Laptop FHD resolution Usually 1920px*/
+@media(min-width: 1380px) and (max-width: 2350px){
+    .backButton{
+        margin-left: -8px;
+    }
+}
+/* Desktop and Laptop 2k resolution Usually 2560px*/
+@media(min-width: 2351px) and (max-width: 3299px){
+    h1{
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+    }
+    .mediaContainer{
+        height: 1000px;
+    }
+    ::ng-deep.ngx-gallery-image-wrapper{
+        border-radius: 25px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail {
+        border-radius: 25px !important;
+    }
+    ::ng-deep .ngx-gallery-thumbnail-video::after {
+        top: calc(50% - 42px) !important;
+        font-size: 56px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active {
+        border: 2px solid rgba(7, 7, 7, 0.705) !important;
+        border-radius: 20px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::before {
+        font-size: 42px;
+        top: 45%;
+    }
+    .content{
+        font-size: 24px;
+    }
+    .projectsContainer{
+        border-radius: 15px !important;
+    }
+    .categoryContainer{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 5px !important;
+    }
+    .buttonWrapper{
+        margin-top: 20px !important;
+        margin-left: 25px !important;
+    }
+    .backButton{
+        transform: scale(1.5);
+    }
+    .backButton:hover{
+        transform: scale(1.5);
+    }
+    .roundParantesis{
+        transform: scale(1.5);
+    }
+    .backButton:hover .roundParantesis{
+        transform: scale(1.5);
+    }
+    .projectTitle{
+        top: 35% !important;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 35% !important;
+    }
+    .currentSlideTitle{
+        top: 35% !important;
+    }
+}
+/* Desktop, Laptop and TV 4k resolution Usually between 3840px — 4096px*/
+@media(min-width: 3300px) and (max-width: 4200px){
+    h1{
+        font-size: 70px;
+        margin-top: 70px !important;
+        margin-bottom: 70px !important;
+    }
+    h3{
+        font-size: 50px;
+    }
+    .mediaContainer{
+        min-height: 1000px;
+        min-width: 50% !important;
+    }
+    ::ng-deep.ngx-gallery-image-wrapper{
+        border-radius: 40px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail {
+        border-radius: 40px !important;
+    }
+    ::ng-deep .ngx-gallery-thumbnail-video::after {
+        top: calc(50% - 65px) !important;
+        font-size: 90px !important;
+    }
+    ::ng-deep.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active::before {
+        font-size: 70px;
+        top: 45%;
+    }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-right {
+        width: 80px;
+        font-size: 60px !important;
+        right: -20px;
+    }
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-left {
+        width: 80px;
+        left: -80px;
+        font-size: 60px !important;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-right {
+        width: 80px;
+        font-size: 60px !important;
+        right: -20px;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-left {
+        width: 80px;
+        left: -80px;
+        font-size: 60px !important;
+    }
+    .content{
+        font-size: 38px;
+        padding-left: 40px;
+    }
+    .content p{
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+    }
+    .projectsContainer{
+        border-radius: 20px !important;
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.65);
+    }
+    .categoryContainer{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: -25px !important;
+        width: 100.5%;
+    }
+    .swiperContainer{
+        width: 83.5%;
+    }
+    .buttonWrapper{
+        margin-top: 70px !important;
+        margin-left: 75px !important;
+    }
+    .backButton{
+        transform: scale(2.2);
+    }
+    .backButton:hover{
+        transform: scale(2.2);
+    }
+    .roundParantesis{
+        transform: scale(2.2);
+    }
+    .backButton:hover .roundParantesis{
+        transform: scale(2.2);
+    }
+    .projectTitle{
+        top: 38% !important;
+        font-size: 38px;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 38% !important;
+        font-size: 38px;
+    }
+    .currentSlideTitle{
+        top: 38% !important;
+        font-size: 38px;
+    }
+}
+/* Swiper text */
+@media(min-width: 768px) and (max-width: 779px){
+    .projectTitle{
+        top: 27% !important;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 27% !important;
+    }
+    .currentSlideTitle{
+        top: 27% !important;
+    }
+}
+@media(min-width: 780px) and (max-width: 979px){
+    .projectTitle{
+        top: 28% !important;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 28% !important;
+    }
+    .currentSlideTitle{
+        top: 28% !important;
+    }
+}
+@media(min-width: 980px) and (max-width: 1120px){
+    .projectTitle{
+        top: 27% !important;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 27% !important;
+    }
+    .currentSlideTitle{
+        top: 27% !important;
+    }
+}
+@media(min-width: 1833px) and (max-width: 2350px){
+    .projectTitle{
+        top: 31.5% !important;
+    }
+    .projectDetails:hover .projectTitle{
+        top: 31.5% !important;
+    }
+    .currentSlideTitle{
+        top: 31.5% !important;
+    }
+}
+/* IOS Safari only */
+@media not all and (min-resolution:.001dpcm) {
+    .projectsContainer{
+        -webkit-mask-image: radial-gradient(white 100%, black 100%);
+        mask-image: radial-gradient(white 100%, black 100%);
+    }
+    ::ng-deep.ngx-gallery-image-wrapper{
+        border-radius: 8px !important;
+        -webkit-mask-image: radial-gradient(white 100%, black 100%);
+        mask-image: radial-gradient(white 100%, black 100%);
+    }
+    
+}
+@media not all and (min-resolution:.001dpcm) { @media (min-width: 280px) and (max-width: 650px){
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-right {
+        left: 267px;
+        top: 81px !important;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-right {
+        left: 267px;
+        top: 16px !important;
+    }
+}}
+@media not all and (min-resolution:.001dpcm) { @media (min-width: 651px) and (max-width: 767px){
+    ngx-gallery /deep/ ngx-gallery-image .ngx-gallery-arrow-right {
+        top: 73px !important;
+    }
+    ngx-gallery /deep/ ngx-gallery-thumbnails .ngx-gallery-arrow-right {
+        top: 14px !important;
+    }
+}}

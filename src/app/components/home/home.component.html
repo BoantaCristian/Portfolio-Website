@@ -1,0 +1,383 @@
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <div class="logo"></div>
+        <input type="checkbox" id="toggleMenu">
+        <label class="menu-btn" for="toggleMenu" (click)="toggleMenu()">
+            <div class="menu-btn__burger"></div>
+        </label>
+        <ul (click)="closeMenu()">
+            <li> <a href="#home" class="home active" (click)="callSkewScroll()"> HOME </a> </li>
+            <li> <a href="#about" class="about" (click)="callSkewScroll()"> ABOUT </a> </li>
+            <li> <a href="#projects" class="projects" (click)="callSkewScroll()"> PROJECTS </a> </li>
+            <li> <a href="#contact" class="contact" (click)="callSkewScroll()"> CONTACT </a> </li>
+        </ul>
+    </header>
+    <!-- BACKGROUND -->
+    <div class="homeBackground animate__animated animate__fadeIn">
+        <img [(src)]="backgroundImage">
+    </div>
+    <h1 class="gradient"></h1>
+    <!-- HOME -->
+    <section class="homeContainer animate__animated animate__fadeIn" id="home">
+        <div class="intro">
+            <div> Hi, my name is <span class="nameHover"> Boanta Cristian, </span> </div>    
+            <div> and I'm a&nbsp;
+                <span class="typeWriter typing"></span>
+            </div>
+        </div>
+        <div class="scrollIndicator" id="scrollIndicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+    <div class="backTopButton" id="backTopButton" (click)="scrollTop()">
+        <span><fa name="chevron-up"></fa></span>
+    </div>
+    <!-- ABOUT -->
+    <section id="about">
+        <mat-card class="col-md-8 offset-2 aboutMeSection">
+            <div>
+                <h1 class="title">About <span class="curlyParantesis"> {{ '{' }}{{ '}' }} </span> </h1>
+                <h2 class="subtitle"> .me <span class="roundParantesis">()</span> </h2>
+                <div class="aboutMeContainer">
+                    <div class="visitCardContainer">
+                        <div class="visitCard" id="tilt">
+                            <div class="visitCardDetails">
+                                <ul>
+                                    <li>Full stack &nbsp; &nbsp; &nbsp;</li>
+                                    <li>Web Dev &nbsp; &nbsp; &nbsp;</li>
+                                    <li>Design &nbsp; &nbsp; &nbsp;</li>
+                                    <li>Databases &nbsp; &nbsp; &nbsp;</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div class="qrCode"></div>
+                        </div>
+                    </div>
+                    <div class="content"> <p *ngFor="let paragraph of aboutMe"> {{paragraph}} </p> <br> </div>
+                </div>
+                <img src="../../../assets/aspects/objectAboutMe.png" class="aboutMeImage">
+            </div>
+        </mat-card>
+        <mat-card class="col-md-8 offset-2 skillsSection">
+            <h2 class="subtitle"> .skills <span class="roundParantesis">()</span></h2>
+            <h2 class="subSubtitle"> .platforms <span class="roundParantesis">()</span></h2>
+            <div class="skillsContainer skillsContainerPosition">
+                <div *ngFor="let skill of skills | slice:0:4;" class="skillCardWrapper">
+                    <div *ngIf="skill.type == 'Platform'" class="skillCard" [id]="skill.id">
+                        <div class="skillDetails">
+                            <div class="skillId" *ngIf="skill.id < 10"> 0{{skill.id}} </div>
+                            <div class="skillId" *ngIf="skill.id >= 10"> {{skill.id}} </div>
+                            <div class="skillTitle"> {{skill.title}} </div>
+                            <div class="skillSubtitle"> {{skill.subtitle}} </div>
+                            <div class="skillDescription" >
+                                <p *ngFor="let paragraph of skill.description"> {{paragraph}} </p>
+                            </div>
+                            <div class="skill">
+                                <div class="skillLevel" name="skillsLevel"> {{skill.level}} </div>
+                                <div class="fullProgressBar"></div>
+                            </div>
+                            <img [src]="skill.logo" class="skillLogo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="../../../assets/aspects/objectPlatforms.png" class="skillsBgImage platformImage">
+        </mat-card>
+        <mat-card class="col-md-8 offset-2 skillsSection">
+            <h2 class="subtitle"> </h2><h2 class="subtitle"> </h2>
+            <h2 class="subSubtitle"> .languages <span class="roundParantesis">()</span></h2>
+            <div class="skillsContainer">
+                <div *ngFor="let skill of skills | slice:4:8;" class="skillCardWrapper">
+                    <div *ngIf="skill.type == 'Language'" class="skillCard" [id]="skill.id">
+                        <div class="skillDetails">
+                            <div class="skillId" *ngIf="skill.id < 10"> 0{{skill.id}} </div>
+                            <div class="skillId" *ngIf="skill.id >= 10"> {{skill.id}} </div>
+                            <div class="skillTitle"> {{skill.title}} </div>
+                            <div class="skillSubtitle"> {{skill.subtitle}} </div>
+                            <div class="skillDescription" >
+                                <p *ngFor="let paragraph of skill.description"> {{paragraph}} </p>
+                            </div>
+                            <div class="skill">
+                                <div class="skillLevel" name="skillsLevel"> {{skill.level}} </div>
+                                <div class="fullProgressBar"></div>
+                            </div>
+                            <img [src]="skill.logo" class="skillLogo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="../../../assets/aspects/objectLanguages.png" class="skillsBgImage">
+        </mat-card>
+        <mat-card class="col-md-8 offset-2 skillsSection">
+            <h2 class="subtitle"> </h2><h2 class="subtitle"> </h2>
+            <h2 class="subSubtitle"> .ohters <span class="roundParantesis">()</span></h2>
+            <div class="skillsContainer">
+                <div *ngFor="let skill of skills | slice:8:12;" class="skillCardWrapper">
+                    <div *ngIf="skill.type == 'Other'" class="skillCard" [id]="skill.id">
+                        <div class="skillDetails">
+                            <div class="skillId" *ngIf="skill.id < 10"> 0{{skill.id}} </div>
+                            <div class="skillId" *ngIf="skill.id >= 10"> {{skill.id}} </div>
+                            <div class="skillTitle"> {{skill.title}} </div>
+                            <div class="skillSubtitle"> {{skill.subtitle}} </div>
+                            <div class="skillDescription" >
+                                <p *ngFor="let paragraph of skill.description"> {{paragraph}} </p>
+                            </div>
+                            <div class="skill">
+                                <div class="skillLevel" name="skillsLevel"> {{skill.level}} </div>
+                                <div class="fullProgressBar"></div>
+                            </div>
+                            <img [src]="skill.logo" class="skillLogo">
+                        </div>
+                    </div>
+                </div>
+            </div><br>
+            <img src="../../../assets/aspects/objectOther.png" class="skillsBgImage">
+        </mat-card>        
+        <div class="col-md-8 offset-2">
+            <h2 class="subtitle"> </h2>
+            <h2 class="subtitle experienceSubtitle">.experience <span class="roundParantesis"> () </span> </h2>
+        </div>
+        <mat-card class="col-md-10 offset-1 experienceSection">
+            <swiper [config]="swipeConfig" effect="fade">
+                <ng-template swiperSlide *ngFor="let experience of experiences;"> 
+                    <div class="experienceContainer">
+                        <div class="experienceCard" [id]="experience.title">
+                            <img [src]="experience.logo" class="experienceLogo">
+                            <div class="experienceCardShape1"></div>
+                            <div class="experienceCardShape2"></div>
+                            <div class="experienceCardShape3"></div>
+                            <div class="experienceCardName"> {{experience.name}} </div>
+                            <div class="experienceCardDomain"> {{experience.domain}} </div>
+                            <table class="experienceCardDetails">
+                                <tr>
+                                    <td style="text-align: right;"> {{experience.position}} </td>
+                                    <td><fa name="user-circle"></fa></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;"> {{experience.time}} </td>
+                                    <td><fa name="clock-o"></fa></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;"> {{experience.location}} </td>
+                                    <td><fa name="map-marker"></fa></td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: right;"> {{experience.startDate}} - {{experience.endDate}} ({{experience.period}}) </td>
+                                    <td><fa name="calendar"></fa></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="experienceContent"> <br>
+                            <h4 class="experienceTitle"> {{experience.title}} </h4>
+                            <h4 class="experienceType"> {{experience.type}} </h4>
+                            <p class="experienceDescription" *ngFor="let paragraph of experience.description"> {{paragraph}} </p> 
+                            Skills acquired: 
+                            <ul class="experienceSkillsAcquired"> 
+                                <li *ngFor="let skill of experience.skillsAcquired"> {{skill}} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+            <img src="../../../assets/aspects/objectExperience.png" class="experienceBgImage">
+        </mat-card>
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects">
+        <mat-card class="col-md-10 offset-1 projectsSection">
+            <h1 class="title">Projects <span class="curlyParantesis"> {{ '{' }}{{ '}' }} </span> </h1>
+            <swiper [config]="projectsSwipeConfig">
+                <ng-template swiperSlide *ngFor="let project of projects;">
+                    <div class="projectsContainer" (click)="openProjectDetails(project)">
+                        <div class="projectDetails">
+                            <div class="projectCover">
+                                <img [(src)]="project.cover">
+                                <div></div>
+                            </div>
+                            <div class="projectId" *ngIf="project.id <= 10"> 0{{project.id}} </div>
+                            <div class="projectId" *ngIf="project.id > 10"> {{project.id}} </div>
+                            <div class="projectMainTitle"> {{project.title}} </div>
+                            <div class="projectTitle"> {{project.title}} </div>
+                            <div class="projectSubtitle"> {{project.subtitle}} </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+            <img src="../../../assets/aspects/objectProjects.png" class="projectsBgImage">
+        </mat-card>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+        <mat-card class="col-md-8 offset-2 contactSection">
+            <div>
+                <h1 class="title">Contact <span class="curlyParantesis"> {{ '{' }}{{ '}' }} </span> </h1>
+                <div class="contactWrapper">
+                    <div class="contactInfo">
+                        <div class="contactCard" id="contactCard">
+                            <h3 class="contactTitle">Contact info</h3>
+                            <table>
+                                <tr>
+                                    <td class="icon"><fa name="map-marker"></fa></td>
+                                    <td> Craiova, Dolj, Romania </td>
+                                </tr>
+                                <tr>
+                                    <td><fa name="envelope"></fa></td>
+                                    <td> cboanta92@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td><fa name="phone"></fa></td>
+                                    <td> +40 732 147 227 </td>
+                                </tr>
+                                <tr>
+                                    <td><fa name="clock-o"></fa></td>
+                                    <td> Monday - Friday 8:00 AM to 5:00 PM </td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                        <div class="socialWrapper">
+                            <a [href]="socialMedia.facebookLink" target="_blank"><fa name="facebook-official" class="facebook"></fa></a>
+                            <a [href]="socialMedia.instagramLink" target="_blank"><fa name="instagram" class="instagram"></fa></a>
+                            <a [href]="socialMedia.youtubeLink" target="_blank"><fa name="youtube-play" class="youtube"></fa></a>
+                            <a [href]="socialMedia.linkedinLink" target="_blank"><fa name="linkedin-square" class="linkedin"></fa></a>
+                            <a [href]="socialMedia.githubLink"  target="_blank">
+                                <span class="github">
+                                    <fa name="github"></fa>
+                                    <fa name="git"></fa>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="formWrapper">
+                        <form [formGroup]="contactForm" autocomplete="off">
+                            <div class="contactFormRow">
+                                <mat-form-field class="contactFormCol">
+                                    <input type="text" matInput formControlName="name" placeholder="Name">
+                                    <label class="text-danger" name="text-danger" *ngIf="contactForm.get('name').touched && contactForm.get('name').errors?.required">Required</label>
+                                </mat-form-field>
+                                <mat-form-field class="contactFormCol">
+                                    <input type="text" matInput formControlName="email" placeholder="Email">
+                                    <label class="text-danger" name="text-danger" *ngIf="contactForm.get('email').touched && contactForm.get('email').errors?.email">Invalid email address</label>
+                                    <label class="text-danger" name="text-danger" *ngIf="contactForm.get('email').touched && contactForm.get('email').errors?.required">Required</label>
+                                </mat-form-field>
+                            </div>
+                            <div class="contactFormRow">
+                                <mat-form-field class="contactFormCol">
+                                    <input type="text" matInput formControlName="subject" placeholder="Subject">
+                                    <label class="text-danger" name="text-danger" *ngIf="contactForm.get('subject').touched && contactForm.get('subject').errors?.required">Required</label>
+                                </mat-form-field>
+                            </div>
+                            <div class="contactFormRow">
+                                <mat-form-field class="contactFormCol">
+                                    <textarea  matInput cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="5" formControlName="message" placeholder="Message"></textarea>
+                                    <label class="text-area-text-danger" name="text-area-text-danger" *ngIf="contactForm.get('message').touched && contactForm.get('message').errors?.required">Required</label>
+                                </mat-form-field>
+                            </div>
+                            <button class="sendButton" (click)="sendEmail()" [disabled]="!contactForm.valid"> .send <span class="roundParantesis"> () </span> </button>
+                        </form><br><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <img src="../../../assets/aspects/objectContact.png" class="contactBgImage">  
+        </mat-card>
+    </section>
+    <!-- FOOTER -->
+    <div class="footer">
+        <img [src]="potion" class="potion">
+        <img [src]="passions" class="passions">
+        <div class="col-md-8 offset-2 footerContainer">
+            <div class="footerTitle">// Made with</div>
+            <div class="footerGrid">
+                <div class="footerGridElements">
+                    <span class="tag pointerCursor" matTooltip="Some values may be random" matTooltipPosition="above"> &#60;process> </span>
+                    <div class="footerContent">
+                        <span matTooltip="Totally random" matTooltipPosition="right"> +245.73h of thinking </span><br>
+                        <span matTooltip="Not everyday + Hollydays" matTooltipPosition="right"> +50 development days </span><br>
+                        <span matTooltip="Even 12h 😵" matTooltipPosition="right"> 2-8 hours a day </span><br>
+                        <span matTooltip="Flavoured Latte" matTooltipPosition="right"> +50 cups of coffee </span><br>
+                        <span matTooltip="Probably more" matTooltipPosition="right"> +150 breaks </span><br>
+                    </div>
+                    <span class="tag"> &#60;/process> </span>
+                </div>
+                <div class="footerGridElements">
+                    <span class="tag"> &#60;environment> </span>
+                    <div class="footerContent">
+                        <span> AngularJs </span><br>
+                        <span> TypeScript </span><br>
+                        <span> HTML </span><br>
+                        <span> CSS </span><br>
+                        <span> Bootstrap </span><br>
+                    </div>
+                    <span class="tag"> &#60;/environment> </span>
+                </div>
+                <div class="footerGridElements">
+                    <span class="tag"> &#60;libraries> </span>
+                    <div class="footerContent">
+                        <span> Angular Material </span><br>
+                        <span> Angular Swiper </span><br>
+                        <span> Vanila Tilt </span><br>
+                        <span> Ngx Gallery </span><br>
+                        <span> Toastr Notifications </span><br>
+                    </div>
+                    <span class="tag"> &#60;/libraries> </span>
+                </div>
+                <div class="footerGridElements">
+                    <span class="tag"> &#60;tools> </span>
+                    <div class="footerContent">
+                        <span> VisualStudio </span><br>
+                        <span> Photoshop </span><br>
+                    </div>
+                    <span class="tag"> &#60;/tools> </span>
+                </div>
+            </div>
+            <div class="footerDetails">
+                <div class="websiteParagraph">
+                    <div class="footerDetailTitle">// Details</div>
+                    <p style="padding-top: 5px;">Portfolio website developed from scratch by Boanta Cristian. 
+                        The website is intuitive, minimalist and responsive for many devices (Desktop, Tablet, Phone, etc.) with various resolutions (HD, FHD, WQHD, 2k, 4k, etc.), 
+                        based on common screen sizes and aspect ratio. </p>
+                    <p> When I'm not programming, I am also busy with watching Movies, Series, Animes, finding entertaining and interesting subjects on Youtube,
+                            gaming, socialising and some of my passions are drawing, technology and even driving. </p>
+                </div>
+                <div class="websiteFooterLinks">
+                    <div class="footerDetailTitle">// Useful links</div>
+                    <div class="footerLinks">
+                        <span class="footerLinkCategory">Resume: </span>
+                        <a [href]="resumeLink" download="CV_Boanta_Cristian"><fa name="download" class="resume"></fa></a>
+                    </div>
+                    <div class="footerLinks">
+                        <span class="footerLinkCategory">Social: </span>
+                        <a [href]="socialMedia.facebookLink" target="_blank"><fa name="facebook-official" class="facebook"></fa></a>
+                        <a [href]="socialMedia.instagramLink" target="_blank"><fa name="instagram" class="instagram"></fa></a>
+                    </div>
+                    <div class="footerLinks">
+                        <span class="footerLinkCategory">Programmer: </span>
+                        <a [href]="socialMedia.githubLink"  target="_blank">
+                            <span class="github">
+                                <fa name="github"></fa>
+                                <fa name="git"></fa>
+                            </span>
+                        </a>
+                        <a [href]="socialMedia.linkedinLink" target="_blank"><fa name="linkedin-square" class="linkedin"></fa></a>
+                        <a [href]="socialMedia.youtubeLink" target="_blank"><fa name="youtube-play" class="youtube"></fa></a>
+                    </div>
+                    <div class="footerLinks">
+                        <span class="footerLinkCategory">Call: </span>
+                        <a href="tel:+40732147227" class="phone"><fa name="phone"></fa><span class="phoneLink"> &nbsp; +40 732 147 227 </span></a>
+                    </div>
+                    <div class="footerLinks">
+                        <span class="footerLinkCategory">Mail: </span>
+                        <a href="mailto:cboanta92@gmail.com" class="mail"><fa name="envelope"></fa><span class="mailLink"> &nbsp; cboanta92@gmail.com </span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footerCopyright">
+                <p>Copyright <fa name="copyright"></fa> 2022 Boanță Ionuț-Cristian | All Rights Reserved</p>
+                <p>Enjoy your day!</p>
+            </div>
+        </div>
+    </div>
+</body>

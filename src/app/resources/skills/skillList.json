@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "AngularJS",
+        "subtitle": "Framework",
+        "description": ["Platform used to develop single page applcations", "Fast and lightweight UI client using typescript"],
+        "level": "90%",
+        "logo": "../../../assets/logo/angularLogo.png",
+        "type": "Platform"
+    },
+    {
+        "id": 2,
+        "title": "React",
+        "subtitle": "Library",
+        "description": ["Open-source JavaScript for building user interfaces", "UI focus design"],
+        "level": "50%",
+        "logo": "../../../assets/logo/reactLogo.png",
+        "type": "Platform"
+    },
+    {
+        "id": 3,
+        "title": "VueJs",
+        "subtitle": "Framework",
+        "description": ["Open-source framework: model–view–viewmodel", "UI and single-page apps", "Nested html css script"],
+        "level": "40%",
+        "logo": "../../../assets/logo/vueLogo.png",
+        "type": "Platform"
+    },
+    {
+        "id": 4,
+        "title": "ASP.NET",
+        "subtitle": "Web Dev Framework",
+        "description": ["", "Cross-platform open-source for building web apps and services"],
+        "level": "80%",
+        "logo": "../../../assets/logo/aspnetLogo.png",
+        "type": "Platform"
+    },
+    {
+        "id": 5,
+        "title": "HTML",
+        "subtitle": "HyperTextMarkupLanguage",
+        "description": ["Set of markup symbols or codes inserted into file", "Intended for display elements on a web page"],
+        "level": "75%",
+        "logo": "../../../assets/logo/htmlLogo.png",
+        "type": "Language"
+    },
+    {
+        "id": 6,
+        "title": "CSS",
+        "subtitle": "Cascading Style Sheets",
+        "description": ["Standard for formatting elements of an HTML document", "Contain style classes"],
+        "level": "80%",
+        "logo": "../../../assets/logo/cssLogo.png",
+        "type": "Language"
+    },
+    {
+        "id": 7,
+        "title": "Script",
+        "subtitle": "JavaScript/TypeScript",
+        "description": ["JS - scripting language for dynamic updating content", "TS - superset of JS with static typing"],
+        "level": "75%",
+        "logo": "../../../assets/logo/javaScriptLogo.png",
+        "type": "Language"
+    },
+    {
+        "id": 8,
+        "title": "C#",
+        "subtitle": "Programming Language",
+        "description": ["Strong type", "Object Oriented", "Multi-Paradigm"],
+        "level": "70%",
+        "logo": "../../../assets/logo/csharpLogo.png",
+        "type": "Language"
+    },
+    {
+        "id": 9,
+        "title": "OOP",
+        "subtitle": "Object-Oriented Programming",
+        "description": ["", "Programming paradigm based on the concept of objects",""],
+        "level": "80%",
+        "logo": "../../../assets/logo/oopLogo.png",
+        "type": "Other"
+    },
+    {
+        "id": 10,
+        "title": "SQL",
+        "subtitle": "Structured Query Language",
+        "description": ["","Programming language designed for managing data held in a database"],
+        "level": "90%",
+        "logo": "../../../assets/logo/sqlLogo.png",
+        "type": "Other"
+    },
+    {
+        "id": 11,
+        "title": "Mobile",
+        "subtitle": "Smartphone applications",
+        "description": ["","Devoloping applications on smartphones", "MIT App inventor"],
+        "level": "25%",
+        "logo": "../../../assets/logo/mobileLogo.png",
+        "type": "Other"
+    },
+    {
+        "id": 12,
+        "title": "English",
+        "subtitle": "Second Language",
+        "description": ["Understanding - C2", "Speaking - C1", "Writing - C1"],
+        "level": "90%",
+        "logo": "../../../assets/logo/englishLogo.png",
+        "type": "Other"
+    }
+]

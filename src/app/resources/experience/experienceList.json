@@ -1,0 +1,54 @@
+[
+    
+    {
+        "id": 1,
+        "name": "Freelance",
+        "title": "Freelance",
+        "domain": "Web Dev",
+        "description": ["In college I started to discover on my own the pleasure to develop from scratch apps, based on the concept of interpretation and transposing a real life situation into digital.", "From small personal projects intended to improve myself to complex websites for the purpose of commercialization."],
+        "skillsAcquired": ["Handle things on my own","Use more frameworks and libraries", "Design User Interfaces"],
+        "period": "endless",
+        "startDate": "2018",
+        "endDate": "Present",
+        "location": "Remote",
+        "time": "Flexible",
+        "logo": "../../../assets/logo/freelanceLogo.png",
+        "themeColor": "blue",
+        "type": "Self improvement",
+        "position": "Self-employed"
+    },
+    {
+        "id": 2,
+        "name": "HELLA Romania",
+        "domain": "Embedded",
+        "title": "HELLA Romania Craiova Software Engineer / Developer",
+        "description": ["Full time programmer and developed from scratch 2 modules for a car (AlarmHorn and TrunkLed). The modules were tested and approved by colleagues and the superior."],
+        "skillsAcquired": ["Team work","Listen to customer needs", "Good interpretation of the requirements", "Quick adaptation with new and complex tools"],
+        "period": "3 mo",
+        "startDate": "July 2018",
+        "endDate": "September 2018",
+        "location": "St. Calea Bucuresti nr. 80, Craiova",
+        "time": "Full time",
+        "logo": "../../../assets/logo/hellaLogo.png",
+        "themeColor": "yellow",
+        "type": "Internship",
+        "position": "Junior software developer"
+    },
+    {
+        "id": 3,
+        "name": "NetRom Software",
+        "domain": "Web Dev",
+        "title": "NetRom Software – Webify",
+        "description": ["An interactive learning program combined with practice which consisted on weekly courses (different approaches of web apps) and one \"shadow day\" (shadowing an employee)."],
+        "skillsAcquired": ["Good understanding of web application’s architecture", "Learning about a project’s life cycle","Pay attention to all details in a source code", "Dependence of all members in a department"],
+        "period": "3 mo",
+        "startDate": "October 2019",
+        "endDate": "December 2019",
+        "location": "St. Caracal 178, Craiova",
+        "time": "Part time",
+        "logo": "../../../assets/logo/netromLogo.png",
+        "themeColor": "green",
+        "type": "Academy",
+        "position": "Disciple"
+    }
+]

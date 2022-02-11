@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import '~swiper/swiper-bundle.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Poppins', sans-serif;
+    /* background: linear-gradient(-135deg, #262e6c, #3e53b8); */
+    background: linear-gradient(-135deg, #24116a,#1e116a, #241d8a,#314a9e, #3babbf);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-attachment:fixed !important;
+    background-repeat: no-repeat;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+/*scrollbar*/
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: #24116a !important;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(131, 159, 201);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgba(131, 159, 201, 0.74);
+    -webkit-transition: 1s;
+}
+.js-tilt-glare {
+    border-radius: 7px!important;
+}

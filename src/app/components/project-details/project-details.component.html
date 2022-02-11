@@ -1,0 +1,69 @@
+<div class="animate__animated animate__fadeIn">
+    <mat-card class="col-md-10 offset-1">
+        <div *ngFor="let currentProject of projects">
+            <div *ngIf="currentProject.id == localStorageProject.id">
+                <h1 class="title"> {{currentProject.title}} </h1>
+                <div class="projectWrapper">
+                    <div class="mediaContainer">
+                        <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery"></ngx-gallery>
+                    </div>
+                    <div class="detailsContainer">
+                        <div class="content"> 
+                            <h3>Description</h3>
+                            <p> {{localStorageProject.subtitle}}. </p>
+                            <p *ngFor="let description of localStorageProject.description"> {{description}} </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoryContainer">
+                    <div class="gridContainer content">
+                        <div class="categories">
+                            <h3>Technologies</h3>
+                            <ul>
+                                <li *ngFor="let technology of localStorageProject.technologies"> {{technology}} </li>
+                            </ul>
+                        </div>
+                        <div class="categories">
+                            <h3>Tools</h3>
+                            <ul>
+                                <li *ngFor="let tool of localStorageProject.tools"> {{tool}} </li>
+                            </ul>
+                        </div>
+                        <div class="categories">
+                            <h3>Languages</h3>
+                            <ul>
+                                <li *ngFor="let language of localStorageProject.languages"> {{language}} </li>
+                            </ul>
+                        </div>
+                        <div class="categories">
+                            <h3>Users</h3>
+                            <ul>
+                                <li *ngFor="let user of localStorageProject.users"> {{user}} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </mat-card>
+    <mat-card class="col-md-10 offset-1 swiperContainer">
+        <swiper [config]="config">
+            <ng-template swiperSlide *ngFor="let project of projects;">
+                <div class="projectsContainer" (click)="selectProject(project)">
+                    <div class="projectDetails">
+                        <div class="projectCover" [id]="project.id">
+                            <img [(src)]="project.cover">
+                            <div></div>
+                        </div>
+                        <div class="projectTitle" [id]="project.shortName"> {{project.shortName}} </div>
+                        <div class="currentSlideTitle" [id]="project.title"> {{project.shortName}} </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+        <div class="buttonWrapper">
+            <button class="backButton" routerLink=""> .back <span class="roundParantesis"> () </span> </button>  
+        </div>
+    </mat-card>
+</div>
