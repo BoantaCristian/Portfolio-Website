@@ -39,6 +39,7 @@ Developed from scratch, intuitive, minimalist and responsive for many devices (D
     
   * The site works properly and as intended on every resolution and borwser
   * CSS resets were applied
+  * Some phones have gyroscope for cards in browser, some doesn't
   * Mozilla doesn't have activated by default backdrop-filter: blur 
       * manual activation link: https://dev.to/snkds/how-to-enable-backdrop-filter-in-firefox-2n8e
       * Noticeable that after manual activation in most cases blur is still not rendered, but browser see it as working due to other css classes activation in `@supports(attribute){...};`
