@@ -39,7 +39,9 @@ Developed from scratch, intuitive, minimalist and responsive for many devices (D
     
   * The site works properly and as intended on every resolution and borwser
   * CSS resets were applied
-  * Some phones have gyroscope for cards in browser, some doesn't and unsecure connection (http) doesn't allow gyroscope and cards are moved by finger
+  * Gyroscome for cards on mobile seems glitchy, so cards are moved by tap
+      * iphone doesn't allow access to accelerometer sensors
+      * some android phones allow gyroscope, some doesn't
       * Secure: https://boantacristian.ro/ gyroscope activated on supporting devices
       * Unsecure: http://boantacristian.ro/ gyroscope deactivated
   * Mozilla doesn't have activated by default backdrop-filter: blur 
